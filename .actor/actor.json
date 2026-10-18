@@ -1,0 +1,41 @@
+{
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
+  "name": "mawsool-linkedin-company-post-watch",
+  "title": "LinkedIn Company Post Monitor | New Only",
+  "description": "LinkedIn company post monitor. Watch company URLs on a schedule. The first run stores the posts already on the page. The next runs return only new posts. No login. Starting from $0.45 per 1,000 companies per run. No LinkedIn login and no cookies.",
+  "seoTitle": "Monitor a LinkedIn Company Page for Posts",
+  "seoDescription": "LinkedIn company post monitor for new posts only. The first run saves the page. Later scheduled runs return only new posts. Starting from $0.45 per 1,000.",
+  "categories": [
+    "LEAD_GENERATION",
+    "SOCIAL_MEDIA",
+    "AUTOMATION",
+    "INTEGRATIONS"
+  ],
+  "version": "1.0",
+  "buildTag": "latest",
+  "minMemoryMbytes": 256,
+  "maxMemoryMbytes": 1024,
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 21600,
+    "memoryMbytes": 256
+  },
+  "environmentVariables": {
+    "ACTOR_SLICE": "post-watch",
+    "CHARGE_EVENT": "company-post-check",
+    "COMPANY_API_BASE_URL": "http://company-lockup.34.166.92.24.sslip.io",
+    "COMPANY_API_KEY": "@mawsoolCompanyApiKey"
+  },
+  "meta": {
+    "templateId": "ts-empty",
+    "generatedBy": "Cursor Agent"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "pricing": "./pay_per_event.json",
+  "dockerfile": "../Dockerfile"
+}
